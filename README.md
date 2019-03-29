@@ -33,8 +33,10 @@ By having one common goal to work toward, we will share ideas and continually mo
 
 ## Getting Started
 
-1. Install [.NET Core SDK 2.0](https://www.microsoft.com/net/download/core).
-1. Install [Visual Studio Code](https://code.visualstudio.com/), the [Insiders Edition](https://code.visualstudio.com/insiders) is highly recommended.
+1. Install [.NET Core SDK 2.x](https://dotnet.microsoft.com/download).
+1. Install IDE of choice...
+    - [Visual Studio Code](https://code.visualstudio.com/), the [Insiders Edition](https://code.visualstudio.com/insiders) is highly recommended.
+    - [Visual Studio](https://visualstudio.microsoft.com/)
 1. Clone the repository: `git clone https://github.com/ssdug/CVPZ.git`.
 1. Change directory into the cloned repository `cd CVPZ`.
 1. Restore packages: `dotnet restore .\CVPZ.sln`.
