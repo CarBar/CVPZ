@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileDataService } from '../../services/profile-data.service';
+import { Profile } from '../../model/profile';
 
 @Component({
   selector: 'app-profile-detail',
@@ -8,7 +9,7 @@ import { ProfileDataService } from '../../services/profile-data.service';
 })
 export class ProfileDetailComponent implements OnInit {
 
-  profile: string;
+  profile: Profile;
 
   constructor(private profileDataService: ProfileDataService) { }
 
@@ -21,8 +22,8 @@ export class ProfileDetailComponent implements OnInit {
     this.profileDataService
       .getProfile()
       .subscribe(
-        (resp) => this.profile = resp//,
-        //(err) => this.serviceError = err
+        (resp) => this.profile = resp// ,
+        // (err) => this.serviceError = err
       );
   }
 }

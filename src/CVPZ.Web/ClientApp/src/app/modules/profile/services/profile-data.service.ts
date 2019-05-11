@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap, catchError, finalize } from 'rxjs/operators';
+import { Profile } from '../model/profile';
 
 @Injectable({
   providedIn: 'root'
@@ -9,23 +10,23 @@ import { tap, catchError, finalize } from 'rxjs/operators';
 export class ProfileDataService {
 
   constructor(
-    protected _http: HttpClient,
+    protected http: HttpClient,
   ) { }
 
-  getProfile(): Observable<string> {
+  getProfile(): Observable<Profile> {
 
-    const requestUrl: string = './api/profile';
+    const requestUrl = './api/profile';
 
     console.log(`Loading: ${requestUrl}`);
 
-    const request: Observable<string>
-        = this._http.get<string>(requestUrl);
+    const request: Observable<Profile>
+        = this.http.get<Profile>(requestUrl);
 
     return request.pipe(
         tap(data => {
             console.log(data);
         }),
-        //catchError(this.handleError),
+        // catchError(this.handleError),
         finalize(() => console.log(`Loaded: ${requestUrl}`))
     );
   }
