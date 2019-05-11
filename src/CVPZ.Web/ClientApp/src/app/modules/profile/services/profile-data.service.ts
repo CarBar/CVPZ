@@ -14,7 +14,7 @@ export class ProfileDataService {
 
   getProfile(): Observable<string> {
 
-    const requestUrl: string = 'http://http://localhost:58381/api/profile';
+    const requestUrl: string = './api/profile';
 
     console.log(`Loading: ${requestUrl}`);
 

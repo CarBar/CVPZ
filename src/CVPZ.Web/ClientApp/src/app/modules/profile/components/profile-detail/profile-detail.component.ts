@@ -13,6 +13,7 @@ export class ProfileDetailComponent implements OnInit {
   constructor(private profileDataService: ProfileDataService) { }
 
   ngOnInit() {
+    this.getData();
   }
 
   getData() {
